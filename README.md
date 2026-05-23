@@ -1,5 +1,3 @@
-# NVIDIA-robot-foundation-model-study_-_-
-
 # ROBOTIS OMX 설치 가이드 (Jetson Orin Nano / Ubuntu 22.04)
 
 > 작성 환경: Jetson Orin Nano, Ubuntu 22.04, ROS 2 Jazzy
@@ -205,6 +203,13 @@ physical_ai_server:
 ---
 
 ## 8단계 - 컨테이너 시작 (이미지 자동 다운로드)
+
+> ⚠️ Docker를 새로 설치한 경우 nvidia 런타임을 먼저 설치해야 합니다.
+
+```bash
+sudo apt-get install -y nvidia-container-runtime
+sudo systemctl restart docker
+```
 
 ```bash
 cd ~/open_manipulator/docker && ./container.sh start
